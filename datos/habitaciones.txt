@@ -1,4 +1,4 @@
-101|simple|25000.0|ocupada
+101|simple|25000.0|disponible
 102|simple|25000.0|disponible
 103|simple|25000.0|disponible
 104|simple|25000.0|disponible
