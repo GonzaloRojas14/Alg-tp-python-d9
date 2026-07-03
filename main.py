@@ -1,5 +1,16 @@
+# -------------------------------------------------------
+# main.py
+# Punto de entrada del Sistema de Gestion de Hotel.
+# Implementa el menu principal con un bucle while
+# (iteracion indefinida, pre-test) y condicional
+# multiple if-elif-else.
+# Ref: estructuras_de_control_y_condicionales_en_python.md
+# Ref: estructuras_repetitivas.md
+# Ref: introduccion_a_la_programacion_con_python_y_pep8.md
+# -------------------------------------------------------
 
 import os
+
 from validaciones import pedir_entero
 from datos import cargar_huespedes
 from datos import cargar_habitaciones
@@ -7,6 +18,23 @@ from datos import cargar_reservas
 from datos import guardar_huespedes
 from datos import guardar_habitaciones
 from datos import guardar_reservas
+from habitaciones import inicializar_habitaciones
+from habitaciones import mostrar_habitaciones
+from habitaciones import mostrar_disponibles
+from habitaciones import cambiar_estado
+from huespedes import registrar_huesped
+from huespedes import mostrar_huespedes
+from huespedes import buscar_huesped
+from huespedes import eliminar_huesped
+from reservas import hacer_checkin
+from reservas import hacer_checkout
+from reservas import mostrar_reservas
+from reservas import mostrar_reservas_activas
+from estadisticas import reporte_ocupacion
+from estadisticas import ingresos_totales
+from estadisticas import ocupacion_por_tipo
+from estadisticas import huesped_mas_noches
+
 
 def limpiar_pantalla():
     """Limpia la terminal para evitar que los menus
@@ -63,16 +91,34 @@ def menu_huespedes(lista_huespedes, lista_reservas):
         )
 
         if opcion == 1:
-            #registrar_huesped
+            registrar_huesped(lista_huespedes)
             pausar()
         elif opcion == 2:
-            #mostrar_huespedes
+            mostrar_huespedes(lista_huespedes)
             pausar()
         elif opcion == 3:
             from validaciones import pedir_dni
             dni = pedir_dni("  DNI a buscar")
+            if dni is not None:
+                huesped = buscar_huesped(
+                    lista_huespedes, dni
+                )
+                if huesped is not None:
+                    print("\n  Huesped encontrado:")
+                    print("  DNI: "
+                          + huesped["dni"])
+                    print("  Nombre: "
+                          + huesped["nombre"])
+                    print("  Telefono: "
+                          + huesped["telefono"])
+                else:
+                    print("  No se encontro huesped"
+                          " con DNI " + dni + ".")
             pausar()
         elif opcion == 4:
+            eliminar_huesped(
+                lista_huespedes, lista_reservas
+            )
             pausar()
         elif opcion == 5:
             seguir = False
@@ -99,10 +145,10 @@ def menu_habitaciones(lista_hab):
         )
 
         if opcion == 1:
-            #mostrar_habitaciones
+            mostrar_habitaciones(lista_hab)
             pausar()
         elif opcion == 2:
-            #mostrar_disponibles
+            mostrar_disponibles(lista_hab)
             pausar()
         elif opcion == 3:
             # Cambiar estado (ej: mantenimiento)
@@ -156,12 +202,20 @@ def menu_estadisticas(lista_reservas, lista_hab,
         )
 
         if opcion == 1:
+            reporte_ocupacion(lista_hab)
             pausar()
         elif opcion == 2:
+            ingresos_totales(
+                lista_reservas, lista_hab
+            )
             pausar()
         elif opcion == 3:
+            ocupacion_por_tipo(lista_hab)
             pausar()
         elif opcion == 4:
+            huesped_mas_noches(
+                lista_reservas, lista_huespedes
+            )
             pausar()
         elif opcion == 5:
             seguir = False
@@ -182,7 +236,7 @@ def main():
         print("  Primera ejecucion detectada.")
         print("  Inicializando habitaciones del"
               " hotel...")
-        #guardar habitaciones
+        lista_habitaciones = inicializar_habitaciones()
         guardar_habitaciones(lista_habitaciones)
 
     print("  Datos cargados correctamente.")
@@ -209,8 +263,18 @@ def main():
         elif opcion == 2:
             menu_habitaciones(lista_habitaciones)
         elif opcion == 3:
+            hacer_checkin(
+                lista_reservas,
+                lista_huespedes,
+                lista_habitaciones
+            )
             pausar()
         elif opcion == 4:
+            hacer_checkout(
+                lista_reservas,
+                lista_habitaciones,
+                lista_huespedes
+            )
             pausar()
         elif opcion == 5:
             menu_estadisticas(

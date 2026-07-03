@@ -1,7 +1,13 @@
-
-# Modulo de validacion de las entradas del usuario.
-# Cada funcion usa un bucle while que se repite hasta que el dato sea valido.
-# El usuario puede ingresar "0" para cancelar y volver al menu anterior. En ese caso, la funcion retorna None.
+# -------------------------------------------------------
+# validaciones.py
+# Modulo de validacion de entradas del usuario.
+# Cada funcion usa un bucle while (iteracion indefinida,
+# pre-test) que se repite hasta que el dato sea valido.
+# El usuario puede ingresar "0" para cancelar y volver
+# al menu anterior. En ese caso, la funcion retorna None.
+# Ref: errores_usuales_al_programar_en_python.md
+# Ref: bucles_y_variables_especiales_en_python.md
+# -------------------------------------------------------
 
 TEXTO_CANCELAR = "  (0 para cancelar)"
 

@@ -1,3 +1,13 @@
+# -------------------------------------------------------
+# datos.py
+# Modulo de persistencia en archivos .txt
+# Cada registro se almacena como una linea con campos
+# separados por "|" (pipe).
+# Usa with open (gestor de contexto) y try/except.
+# Ref: manejo_de_archivos_txt_en_python.md
+# Ref: manejo_avanzado_de_archivos_y_excepciones.md
+# Ref: gestion_de_archivos_y_registros.md
+# -------------------------------------------------------
 
 import os
 
