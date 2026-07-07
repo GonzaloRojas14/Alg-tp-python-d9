@@ -1,6 +1,12 @@
 # Sistema de Gestión de Hotel
 
-## IGrupo D9
+## Grupo D9
+
+Peralta Luciano Ivan
+Ramírez Pablo Nicolas
+Rojas Gonzalo Damián 
+Vaernet Bianca Estefania
+Zárate Brisa Yael
 
 ## Comisión
 
