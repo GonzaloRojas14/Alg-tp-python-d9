@@ -6,7 +6,7 @@ Peralta Luciano Ivan \
 Ramírez Pablo Nicolas \
 Rojas Gonzalo Damián \
 Vaernet Bianca Estefania \
-Zárate Brisa Yael \
+Zárate Brisa Yael
 
 ## Comisión
 
