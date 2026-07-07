@@ -2,11 +2,11 @@
 
 ## Grupo D9
 
-Peralta Luciano Ivan
-Ramírez Pablo Nicolas
-Rojas Gonzalo Damián 
-Vaernet Bianca Estefania
-Zárate Brisa Yael
+Peralta Luciano Ivan n\
+Ramírez Pablo Nicolas n\
+Rojas Gonzalo Damián n\
+Vaernet Bianca Estefania n\
+Zárate Brisa Yael n\
 
 ## Comisión
 
