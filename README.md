@@ -1,16 +1,10 @@
 # Sistema de Gestión de Hotel
 
-## Integrantes del grupo
-
-| Nombre | Rol |
-| :--- | :--- |
-| (Completar) | (Completar) |
-| (Completar) | (Completar) |
-| (Completar) | (Completar) |
+## IGrupo D9
 
 ## Comisión
 
-(Completar con el número de comisión)
+K1.4
 
 ## Descripción general del sistema
 
@@ -80,11 +74,3 @@ gestion_hotel/
 - En la primera ejecución, el sistema inicializa automáticamente las habitaciones del hotel.
 - Los datos se guardan al seleccionar la opción "Guardar y salir" del menú principal.
 - Los archivos de datos se almacenan en la carpeta `datos/`.
-
-## Uso de Inteligencia Artificial
-
-| Herramienta | Para qué se utilizó | Cómo se utilizó |
-| :--- | :--- | :--- |
-| (Completar, ej: Google Gemini) | (Completar, ej: generar estructura inicial del proyecto) | (Completar, ej: se le proporcionó la consigna y los apuntes de la materia como contexto. Se revisó y adaptó cada módulo generado para asegurar que cumpla con los lineamientos de la cátedra) |
-
-> **Nota:** Todas las soluciones propuestas por la IA fueron revisadas, comprendidas y adaptadas por los integrantes del grupo. Se verificó que el código cumpla con los paradigmas y estructuras enseñadas en la asignatura.
